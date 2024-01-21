@@ -111,3 +111,20 @@ tree.plot_tree(dt_final,
                class_names = ['Europe', 'Oceania'],
                filled=True)
 plt.show()
+
+# Print the feature importances
+feature_importances = dt_final.feature_importances_
+print(feature_importances)
+
+# Sort the feature importances from greatest to least using the sorted indices
+sorted_indices = feature_importances.argsort()[::-1]
+print(sorted_indices)
+sorted_feature_names = x_train.columns[sorted_indices]
+print(sorted_feature_names)
+sorted_importances = feature_importances[sorted_indices]
+print(sorted_importances)
+
+# Create a bar plot of the feature importances
+sns.set(rc={'figure.figsize':(11.7,8.27)})
+sns.barplot(x=sorted_importances, y=sorted_feature_names)
+plt.show()
