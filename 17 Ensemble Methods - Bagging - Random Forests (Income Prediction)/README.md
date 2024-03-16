@@ -1,4 +1,4 @@
-Ensemble Methods - Random Forests (Income Prediction)
+Ensemble Methods - Bagging - Random Forests (Income Prediction)
 
 Dataset containing census information is from UCI ML Repository: https://archive.ics.uci.edu/dataset/20/census+income.
 
