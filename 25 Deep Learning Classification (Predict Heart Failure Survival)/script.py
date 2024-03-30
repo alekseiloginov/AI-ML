@@ -51,6 +51,9 @@ model.add(Dense(2, activation='softmax'))  # output layer, use softmax for class
 
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
+# we can also use `sparse_categorical_crossentropy` to avoid one hot encoding of the integer labels
+# model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+
 
 # Train and evaluate the model
 model.fit(X_train, Y_train, epochs = 100, batch_size = 16, verbose=1)
