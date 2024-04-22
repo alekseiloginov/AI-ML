@@ -1,4 +1,4 @@
-Deep Learning Classification (Predict Heart Failure Survival)
+Deep Learning - Classification (Predict Heart Failure Survival)
 
 Heart Failure Prediction dataset is from Kaggle: https://www.kaggle.com/datasets/andrewmvd/heart-failure-clinical-data.
 

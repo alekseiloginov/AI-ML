@@ -1,4 +1,4 @@
-Deep Learning Regression (Predict Graduate School Admission)
+Deep Learning - Regression (Predict Graduate School Admission)
 
 Graduate admissions dataset is from Kaggle: https://www.kaggle.com/datasets/mohansacharya/graduate-admissions.
 
