@@ -1,4 +1,4 @@
-Natural Language Processing - Word Embeddings (US Presidents Vocabulary)
+NLP - Natural Language Processing -- Word Embeddings (US Presidents Vocabulary)
 
 Collection of inauguration speeches known as the US Presidential Inaugural Addresses is from the Natural Language Toolkit: 
 https://www.nltk.org/book/ch02.html.
