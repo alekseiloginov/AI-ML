@@ -1,8 +1,6 @@
 import numpy as np
-from preprocessing import input_features_dict, target_features_dict, reverse_input_features_dict, \
-    reverse_target_features_dict, max_decoder_seq_length, input_docs, target_docs, input_tokens, target_tokens
-from training import encoder_inputs, decoder_inputs, encoder_states, decoder_lstm, decoder_dense, \
-    encoder_input_data, num_decoder_tokens, latent_dim
+from preprocessing import target_features_dict, reverse_target_features_dict, max_decoder_seq_length, input_docs, vectorize
+from training import encoder_inputs, decoder_inputs, encoder_states, decoder_lstm, decoder_dense, encoder_input_data, num_decoder_tokens, latent_dim
 from tensorflow import keras
 from keras.layers import Input
 from keras.models import Model, load_model
@@ -66,11 +64,31 @@ def decode_sequence(test_input):
 
     return decoded_sentence
 
-
+# Training text translation
 # Range is a number of test sentences to translate
-for seq_index in range(100):
+for seq_index in range(10):
     test_input = encoder_input_data[seq_index: seq_index + 1]
     decoded_sentence = decode_sequence(test_input)
-    print('-')
+    print('---')
     print(f'Input sentence {seq_index}:', input_docs[seq_index])
+    # print(f'Input tensor {seq_index}:', test_input)
     print(f'Decoded sentence {seq_index}:', decoded_sentence)
+
+
+# New text translation
+def translate(new_sentence):
+    new_test_input = vectorize(new_sentence)
+    new_decoded_sentence = decode_sequence(new_test_input)
+    print('---')
+    print(f'Input sentence:', new_sentence)
+    # print(f'Input tensor:', new_test_input)
+    print(f'Decoded sentence:', new_decoded_sentence)
+
+translate("Wow! Hello!")
+
+# Interactive translation
+def translate_user_input():
+    while True:
+        translate(input("Please enter your text to translate: "))
+
+translate_user_input()

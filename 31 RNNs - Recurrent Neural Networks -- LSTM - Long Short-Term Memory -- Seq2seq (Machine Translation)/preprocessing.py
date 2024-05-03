@@ -8,6 +8,8 @@ data_path = "eng-rus.txt"
 with open(data_path, 'r', encoding='utf-8') as f:
     lines = f.read().split('\n')
 
+# print(len(lines)) # 496060
+
 # Building empty lists to hold sentences
 input_docs = []
 target_docs = []
@@ -18,7 +20,7 @@ target_tokens = set()
 # Regex pattern for splitting the text into tokens
 word_or_punctuation = r"[\w']+|[^\s\w]"
 
-# Choose the number of lines for preprocessing
+# Choose the number of lines for preprocessing (total: 496060)
 for line in lines[:500]:
     # Input and target sentences are separated by tabs
     input_doc, target_doc = line.split('\t')[:2]
@@ -95,3 +97,21 @@ for line, (input_doc, target_doc) in enumerate(zip(input_docs, target_docs)):
         if timestep > 0:
             # shift decoder's target data one timestep left (`timestep-1`), as it is one step ahead of its input data
             decoder_target_data[line, timestep-1, target_features_dict[token]] = 1.
+
+# Converts new text into a NumPy matrix so we can translate new sentences that aren’t in the dataset.
+def vectorize(input_doc):
+    # tokenize text
+    tokens = re.findall(word_or_punctuation, input_doc)
+
+    # generate empty tensor with a single doc, having the same shape as training input docs
+    tensor = np.zeros(
+        (1, max_encoder_seq_length, num_encoder_tokens),
+        dtype='float32')
+
+    # one-hot encode each known token
+    for timestep, token in enumerate(tokens):
+        # skip unknown tokens, as we would need to redo preprocessing otherwise
+        if token in input_features_dict:
+            tensor[0, timestep, input_features_dict[token]] = 1.
+
+    return tensor
