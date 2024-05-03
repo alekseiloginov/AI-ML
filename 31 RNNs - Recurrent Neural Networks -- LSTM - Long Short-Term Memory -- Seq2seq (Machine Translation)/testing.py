@@ -84,7 +84,7 @@ def translate(new_sentence):
     # print(f'Input tensor:', new_test_input)
     print(f'Decoded sentence:', new_decoded_sentence)
 
-translate("Wow! Hello!")
+translate("Hello!")
 
 # Interactive translation
 def translate_user_input():

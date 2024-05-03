@@ -1,6 +1,6 @@
 RNNs - Recurrent Neural Networks -- LSTM - Long Short-Term Memory -- Seq2seq (Machine Translation)
 
-The English-Russian language pair dataset is from the Tatoeba Project: https://www.manythings.org/anki/.
+The language pair datasets are from the Tatoeba Project: https://www.manythings.org/anki/.
 
 Goals:
 - Use Keras models with seq2seq neural networks to build a translation tool.

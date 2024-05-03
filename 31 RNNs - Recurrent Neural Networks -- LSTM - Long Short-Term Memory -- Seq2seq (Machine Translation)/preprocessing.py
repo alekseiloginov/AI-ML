@@ -1,14 +1,15 @@
 import numpy as np
 import re
 
-# Importing our translations
-data_path = "eng-rus.txt"
+# Importing translation pairs
+# data_path = "eng-rus.txt"
+data_path = "eng-yue.txt"
 
 # Defining lines as a list of each line
 with open(data_path, 'r', encoding='utf-8') as f:
     lines = f.read().split('\n')
 
-# print(len(lines)) # 496060
+# print(len(lines))
 
 # Building empty lists to hold sentences
 input_docs = []
@@ -20,7 +21,7 @@ target_tokens = set()
 # Regex pattern for splitting the text into tokens
 word_or_punctuation = r"[\w']+|[^\s\w]"
 
-# Choose the number of lines for preprocessing (total: 496060)
+# Choose the number of lines for preprocessing
 for line in lines[:500]:
     # Input and target sentences are separated by tabs
     input_doc, target_doc = line.split('\t')[:2]
