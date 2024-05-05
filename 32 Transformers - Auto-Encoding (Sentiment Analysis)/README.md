@@ -1,6 +1,6 @@
 Transformers - Auto-Encoding (Sentiment Analysis)
 
-`distilbert-base-uncased-finetuned-sst-2-english` Large Language Model (encoder-only) is from Hugging Face:
+`distilbert-base-uncased-finetuned-sst-2-english` large language model (encoder-only) is from Hugging Face:
 https://huggingface.co/distilbert/distilbert-base-uncased-finetuned-sst-2-english.
 This is a smaller version of “BERT”, a bidirectional encoder-only transformer model. 
 This specific version was finetuned for sentiment classification.

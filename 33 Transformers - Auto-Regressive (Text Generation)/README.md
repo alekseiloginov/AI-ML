@@ -1,6 +1,6 @@
 Transformers - Auto-Regressive (Text Generation)
 
-Ultra-lightweight DistilGPT2 Large Language Model (decoder-only) is from Hugging Face:
+Ultra-lightweight DistilGPT2 large language model (decoder-only) is from Hugging Face:
 https://huggingface.co/distilbert/distilgpt2. So as the full GPT-2 model:
 https://huggingface.co/openai-community/gpt2.
 
