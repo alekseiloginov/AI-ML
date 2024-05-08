@@ -57,7 +57,7 @@ test_dataset = Dataset.from_pandas(test_df)
 #     bnb_4bit_compute_dtype=torch.bfloat16
 # )
 # # instantiate the model
-# model = AutoModelForCausalLM.from_pretrained(model_name, quantization_config=quant_config, token='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')
+# model = AutoModelForCausalLM.from_pretrained(model_name, quantization_config=quant_config, token='YOUR_HUGGING_FACE_ACCESS_TOKEN')
 
 # CPU version:
 model = AutoModelForCausalLM.from_pretrained(model_name)
