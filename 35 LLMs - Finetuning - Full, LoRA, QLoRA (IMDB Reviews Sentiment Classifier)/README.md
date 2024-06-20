@@ -1,4 +1,4 @@
-Transformers - Finetuning - Full, LoRA, QLoRA (IMDB Reviews Sentiment Classifier)
+LLMs - Finetuning - Full, LoRA, QLoRA (IMDB Reviews Sentiment Classifier)
 
 IMDB movie reviews dataset is from Hugging Face: https://huggingface.co/datasets/imdb.
 In the dataset, `text` column holds the reviews, `label` is 1 is positive sentiment, 0 is negative sentiment. 
