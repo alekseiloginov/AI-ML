@@ -1,4 +1,4 @@
-Transformers - Evaluation - Perplexity (Frankenstein Text Generation)
+LLMs - Evaluation - Perplexity (Frankenstein Text Generation)
 
 The original text of Shelley's Frankenstein is from Project Gutenberg: https://www.gutenberg.org/ebooks/84.
 
